@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Update title</h1>
+
+<form action="updaterecord/{{ mytitle.id }}" method="post">
+{% csrf_token %}
+Anime:<br>
+<input name="anime" value="{{ mytitle.anime }}">
+<br><br>
+Author:<br>
+<input name="author" value="{{ mytitle.author }}">
+<br><br>
+Chapters:<br>
+<input name="chapters" value="{{ mytitle.chapters }}">
+<br><br>
+<input type="submit" value="Update">
+</form>
+
+</body>
+</html>
